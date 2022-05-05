@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Setup les link css et icones + js -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript,portfolio,portefolio,BTS SIO, SLAM,BTS SIO SLAM,STAGE BTS,PARC DE VILGENIS">
+    <meta name ="description" content ="Le portfolio d'un étudiant en BTS SIO option développement d'applications , 
+    vous trouvrerez ici mon CV , mes projets réalisé durant mon BTS et mes outils de veille.">
+    <meta name="author" content="Hamza Bella">
+    <link rel="icon" type="image/png" href="https://hamza-dev.fr/fav.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 1500px)"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 1280px) and (max-width: 1600px)"
+      href="style_mediumscreen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 1000px) and (max-width: 1280px)"
+      href="style_smallscreen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (max-width: 1000px)"
+      href="style_mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 375px) 
+      and (max-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)"
+      href="style_mobile.css"
+    />
+  
+    <script src="jQuery3.6.0.js"></script>
+    <script src="hamza.js"></script>
+    <title>Hamza-Dev</title>
+  </head>
+  <body>
+    <!-- Header barre de navigation plus logo hamzadev -->
+    <header>
+      <nav class="pc">
+        <img class="mobileimg" src="https://hamza-dev.fr/logopage.png" alt="Logo d'Hamza-Dev" />
+        <div class="navigation">
+          <ul>
+            <li><a href="#presentation">Accueil</a></li>
+            <li><a href="#bts">BTS SIO</a></li>
+            <li><a href="#projets">Projets</a></li>
+
+            <li><a href="#stage">Stage</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="mobile-nav">
+        <a href="#presentation" class="bloc-icon" id=>
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#bts" class="bloc-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+        <a href="#projets" class="bloc-icon">
+          <i class="fa-solid fa-list-check"></i>
+        </a>
+        <a href="#stage" class="bloc-icon">
+          <i class="fa-solid fa-house-laptop"></i>
+        </a>
+        <a href="#veille" class="bloc-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </a>
+        <a href="#contact" class="bloc-icon">
+          <i class="fa-solid fa-address-card"></i>
+        </a>
+    </nav>
+    </header>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        $(window).scrollTop(0);
+      }
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Retour</button>
+
+    <!-- Premiere page , contient le text en gros et la fleche animée -->
+    <main>
+      <section id="accueil">
+        <div class="text">
+          <h1 class="bienvenue">Bienvenue sur mon portfolio</h1>
+          <p >
+            Vous trouverez ici mes projets realisé durant mon BTS SIO ainsi que
+            diverses informations
+          </p>
+          <button id="cv"><i class="fa-solid fa-eye"></i> Voir mon CV</button>
+          <i class="fa-solid fa-arrow-down" id=""></i>
+        </div>
+      </section>
+      <!-- Deuxieme page contient ma presentation et le systeme d'affichage des competence en carrousels depuis le JS -->
+      <section id="presentation">
+        <div class="moi">
+          <img src="https://hamza-dev.fr/photo.png" alt="photo d'Hamza Bella" />
+          <div>
+            <h3 class="texth3">
+              Je m'appelle Hamza , j'ai 19 ans et je suis en BTS services
+              informatiques aux organisations , option Solutions locicielles et
+              application métiers au
+              <a style="color: black; text-decoration: underline;" href=""
+                >Lycée Parc de Vilgénis à Massy
+              </a>
+            </h3>
+            <h3>
+              A l'issue de mon BTS j'envisage une Licence professionnel dans le
+              developpement web et mobile
+            </h3>
+          </div>
+        </div>
+  
+        <div class="competence">
+          <div class="text">
+            <i class="fa-solid fa-caret-left" id="previouscompetence" style="cursor: pointer;"></i>
+            <h1 id="text" >Mes compétences en Web</h1>
+            <i class="fa-solid fa-caret-right" id="nextcompetence" style="cursor: pointer;"></i>
+          </div>
+          <div class="slide">
+            <div class="icone">
+              <i class="fa-brands fa-css3-alt" style="color: blue"></i>
+              <i class="fa-brands fa-html5" style="color: orange"></i>
+              <i class="fa-brands fa-php" style="color: #3e376d"></i>
+              <i class="fa-brands fa-js" style="color: yellow"></i>
+  
+              <img id="1" src="https://hamza-dev.fr/java.png" alt="Logo Java" />
+              <img id="2" src="https://hamza-dev.fr/C.png" alt="Logo C#" />
+              <img id="3" src="https://hamza-dev.fr/flutter.png" alt="Logo Flutter" />
+              <img id="4" src="https://hamza-dev.fr/react.png" alt="Logo React" />
+              <img id="5" src="https://hamza-dev.fr/mysql.png" alt="Logo mysql" />
+              <img id="6" src="https://hamza-dev.fr/sql.png" alt="Logo sql" />
+              <img id="7" src="https://hamza-dev.fr/bt.png" alt="Logo bootstap" />
+              <img id="8" src="https://hamza-dev.fr/jquery.png" alt="Logo jQuery" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description du BTS  -->
+      <section id="bts">
+        <h1>Le BTS SIO</h1>
+        <div class="infobts">
+          <div class="info">
+            <h1>À propos de mon BTS</h1>
+          
+            <h3>
+              Le BTS Services informatique aux Organisations est un diplôme
+              reconnu par l’état de niveau Bac+2. Il remplace depuis septembre
+              2011 l’ancien BTS informatique de Gestion (BTS IG). En effet,
+              cette nouvelle formule répond aux attentes de la profession en
+              matière de qualification. Le programme a évolué en fonction de la
+              place et du rôle des TIC (Technologies d’Information
+              Communication) et propose deux spécialités bien distinctes : le
+              BTS SIO SISR et le BTS SIO SLAM.
+            </h3>
+         
+          </div>
+          <div class="bloc">
+            <h1>
+              OPTION A : SISR SOLUTIONS D'INFRASTRUCTURES SYSTÈMES ET RÉSEAUX
+            </h1>
+            <p>
+              La spécialisation SISR du BTS SIO permet d’apprendre un métier qui
+              consiste à installer, configurer et gérer les équipements et les
+              réseaux informatiques. Cela signifie intervenir sur la conception,
+              la mise en place, le déploiement et la maintenance de programmes
+              destinés à la gestion au sein d’une organisation.
+            </p>
+          </div>
+          <div class="bloc1">
+            <h1>
+              OPTION B : SLAM SOLUTIONS LOGICIELLES ET APPLICATIONS MÉTIERS
+            </h1>
+            <p>
+              La spécialisation SLAM du BTS SIO est elle plus orientée
+              Développement. Elle permet d'apprendre à réaliser des logiciels,
+              sites webs, applications mobiles, mais aussi de rédiger des
+              documentations techniques liées à celles-ci. De plus, elle permet
+              d'apprendre à former des utilisateurs pour gérer la maintenance
+              des applications.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Projets -->
+      <section id="projets">
+        <div class="info1">
+          <h1>Vous trouverez ici mes projets réalisés durant mon BTS</h1>
+        </div>
+        <div class="listeprojets">
+          <div>
+            <img src="https://hamza-dev.fr/vva.png" alt="Image du projet VVA" />
+            <h2>
+              Site de réservation et d'administration d'hébergements en montagne
+            </h2>
+            <button>DEMO</button>
+          </div>
+          <div>
+            <img class="Avis" src="https://hamza-dev.fr/vva.png" alt="Image du projet VVA" />
+            <h2>
+              Application mobile de partage de photos et d'avis sur les
+              hébergements visités
+            </h2>
+            <button >DEMO</button>
+          </div>
+          <div>
+            <img src="https://hamza-dev.fr/nanocom.png" alt="Image du projet Nanocom" />
+            <h2>
+              Site polyvalent permettant une connexion sécurisée des employés et
+              un échange de document et une messagerie instantanée
+            </h2>
+            <button id="nanodoc" >DEMO</button>
+          </div>
+<div>
+            <img src="https://hamza-dev.fr/vvaavisLOGO.png" alt="Image du projet VvaAvis" />
+            <h2>
+              Application Mobile en REACT NATIVE de partage d'avis et de photos pour Vva
+            </h2>
+            <button id="vvaavis" >DEMO</button>
+          </div>
+        </div>
+      </section>
+      <!-- Stage -->
+      <section id="stage">
+        <div class="stageglobal">
+        <div class="info">
+          <h1>Mon Stage</h1>
+        </div>
+        <div class="listestage">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.9480090102!2d2.3900768158515104!3d48.782882813973984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6738fafc2a78f%3A0x5d95cf0a84622db7!2s6%20Av.%20de%20la%20Commune%20de%20Paris%2C%2094400%20Vitry-sur-Seine!5e0!3m2!1sfr!2sfr!4v1647785803530!5m2!1sfr!2sfr"
+           
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <div class="text"><h3>J'ai effectué mon stage chez NanoCom pour une durée de 8 semaines, durant ce stage j'ai réalisé les taches suivantes :</h3>
+          <ul>
+            <li>Concéption d'un site polyvalent</li>
+            <li>Création d'un espace de connexion sécurisée</li>
+            <li>Réalisation d'un systeme d'upload de ficher</li>
+            <li>Conception d'une base de données pour contenir toutes les informations nécessaires aux différentes requêtes</li>
+            <li>Réalisation d'un système de validation de compte par code reçu par Émail</li>
+            <li>Réalisation d'une messagerie instantanée avec indication de messages non lus</li>
+            
+          </ul></div>
+          
+        </div>
+      </div>
+      </section>
+      <section id="veille">
+        <h1>Ma veille technologique</h1>
+        <div class="infobts">
+          <div class="info">
+            <h1>Les nouveaux langages de programmation.</h1>
+          
+            <h3>
+              Pour ma veille technologique j'ai choisi d'aborder le sujet des langages de programmation et plus particulièrement leurs évolutions et l'arrivée de nouveaux langages dans le domaine de la programmation.            </h3>
+         
+          </div>
+          <div class="bloc">
+            <h1>
+              Article 1 : Le no-code : futur de la filière programmation ?
+            </h1>
+            <a href="https://alm.developpez.com/actu/331802/Le-no-code-futur-de-la-filiere-programmation-C-est-l-avis-du-fondateur-de-Bubble-qui-explique-pourquoi-les-ingenieurs-devraient-soutenir-les-outils-no-code-critiques-sur-l-aspect-maintenance/" target="_BLANK"><img src="https://hamza-dev.fr/nocode.png" alt="Logo No-code"></a> 
+          </div>
+          <div class="bloc1">
+            <h1>
+              Article 2 : Gravity, un nouveau langage de programmation pour les développeurs iOS et Android
+            </h1>
+            <a href="https://www.developpez.com/actu/123272/Gravity-un-nouveau-langage-de-programmation-pour-les-developpeurs-iOS-et-Android-quelles-sont-les-raisons-de-l-adopter/" target="_blank" rel="noopener noreferrer"><img  class="gravity"src="https://hamza-dev.fr/gravity.png" alt="Logo Gravity"></a> 
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+        <div class="info">
+          <h1 style="color: black;">Contact</h1>
+          <h3 style="color: black;">Formulaire de contact</h3>
+          <div class="form">
+            <form action="" method="POST">
+              <input type="mail" name="Email" id="email" placeholder="Email" required>
+              <input type="text" name="Objet" id="Objet" placeholder="Objet"required>
+              <textarea name="Message" placeholder="Votre message..." required></textarea>
+              <input type="submit" name="" id="">
+            </form>
+          </div>
+          <div class="coor">
+          <h3><ul style="color: black;">
+            <li>Numéro : <a style="color: black;"  href="tel:+33652865074">0652865074</a></li>
+            <li>Mail : <a style="color: black;" href="mailto: hamza.bella2107@gmail.com">hamza.bella2107@gmail.com</a></li>
+            <li><i class="fa-brands fa-linkedin"></i> Linkedin : <a style="color: black;" href="https://www.linkedin.com/in/hamza-bella-31a3031b7/" target="_BLANK">Hamza Bella</a> </li>
+            <li><i class="fa-brands fa-github"></i><a  style="color: black;" href="https://github.com/21Hmzz" target="_BLANK"> : 21Hmzz</a></li>
+            <li></li>
+          </ul></h3>
+        </div>
+        </div>
+      </section>
+      <footer>
+        <h1 style="font-size: 18px;">© Hamza Bella | Tous droits Réservés</h1>
+      </footer>
+    </main> 
+  </body>
+  
+</html>
+
